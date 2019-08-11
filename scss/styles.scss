@@ -1,0 +1,125 @@
+* {
+  color: #767676;
+}
+
+ @mixin borders-1 {
+   border-left: 20px solid #4B5457;
+   border-right: 20px solid #4B5457;
+   border-bottom: 6px solid #4B5457;
+   border-top: 6px solid #4B5457;
+   border-radius: 4px;
+ }
+
+@mixin borders-2 {
+  border-left: 6px solid #5F6E58;
+  border-right: 6px solid #5F6E58;
+  border-bottom: 6px solid #5F6E58;
+  border-top: 6px solid #5F6E58;
+}
+
+
+
+#ontop {
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  height: 36px;
+  width: 1200px;
+  background-color: #5F6E58;
+  @include borders-1;
+}
+
+.slideshow {
+  margin: 0 auto;
+  margin-bottom: 100px;
+  display: block;
+  width: 1200px;
+  height: 687px;
+}
+
+#carousel {
+  @include borders-1;
+  margin: 0 auto;
+
+}
+
+#inbetween {
+  display: block;
+  margin-left: -45px;
+  margin-bottom: 40px;
+  margin-top: -90px;
+  height: 36px;
+  width: 1200px;
+  background-color: #5F6E58;
+  @include borders-1;
+}
+
+#top-section {
+  display: flex;
+  justify-content: space-between;
+  .in-spotlight {
+    box-sizing: border-box;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: 340px;
+    text-align: center;
+    @include borders-2;
+    border-radius: 20px;
+    background-color: lightgray;
+    .circle {
+      margin-left: -20px;
+      margin-top: -10px;
+      border: 6px solid #5F6E58;
+      border-radius: 20px;
+    }
+    h2 {
+      text-transform: uppercase;
+      margin: 10px;
+    }
+    p {
+      min-height: 220px;
+    }
+    .btn{
+      margin: 10px 0;
+    }
+  }
+}
+
+
+main {
+  margin-top: 100px;
+  h2 {
+    text-transform: capitalize;
+    span {
+      color: black;
+    }
+  }
+
+  .row {
+    padding: 20px 0px;
+    display: table;
+    margin-bottom: 20px;
+
+    .main-text {
+      vertical-align: middle;
+      display: table-cell;
+      border-top: 2px solid #5F6E58;
+      border-bottom: 2px solid #5F6E58;
+    }
+  }
+}
+
+footer {
+  ul {
+    text-decoration: none;
+    width: 100%;
+
+    li {
+      display: inline-block;
+      .back-to-top {
+        float: right;
+      }
+    }
+  }
+}
